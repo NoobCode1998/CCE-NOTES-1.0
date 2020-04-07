@@ -33,6 +33,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.scwang.wave.MultiWaveHeader;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -41,6 +42,7 @@ public class Register extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText mEmail, mPassword, mAccess;
     Button mRegisterBtn;
+    MultiWaveHeader waveHeader;
     TextView mLoginBtn;
     FirebaseAuth fAuth;
     ProgressBar progressBar;
@@ -64,7 +66,7 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-
+        waveHeader = findViewById(R.id.reg_wave_id);
         mEmail = findViewById(R.id.Email);
         mPassword = findViewById(R.id.password);
         mAccess = findViewById(R.id.access);
@@ -73,6 +75,15 @@ public class Register extends AppCompatActivity {
 
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
+
+
+        waveHeader.setVelocity(3);
+        waveHeader.setProgress(1);
+        waveHeader.isRunning();
+        waveHeader.setGradientAngle(45);
+        waveHeader.setWaveHeight(40);
+        waveHeader.setStartColor(getResources().getColor(R.color.wave_start));
+        waveHeader.setCloseColor(getResources().getColor(R.color.wave_end));
 
 
 

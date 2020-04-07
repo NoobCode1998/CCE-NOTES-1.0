@@ -44,6 +44,7 @@
         <item name="android:background">@drawable/edittext</item>
         <item name="android:padding">10dp</item>
         <item name="android:ems">10</item>
+        <item name="android:fontFamily">@font/opensans</item>
         <item name="android:textColor">@color/edittext_textcolor</item>
        <item name="android:textColorHint">@color/edittext_hintcolor</item>
     </style>

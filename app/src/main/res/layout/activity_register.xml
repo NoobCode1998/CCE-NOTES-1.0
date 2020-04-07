@@ -9,8 +9,9 @@
     tools:context=".Register">
 
     <com.scwang.wave.MultiWaveHeader
+        android:id="@+id/reg_wave_id"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="125dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -87,6 +88,9 @@ style="@style/edittext_style"
         android:text="Sign Up"
         android:padding="10dp"
         android:textSize="15sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="@font/opensans"
         android:background="@drawable/edittext"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -100,6 +104,7 @@ style="@style/edittext_style"
         android:layout_marginTop="4dp"
         android:text="Already Registered ? Login Here"
         android:textColor="#fff"
+        android:fontFamily="@font/opensans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
