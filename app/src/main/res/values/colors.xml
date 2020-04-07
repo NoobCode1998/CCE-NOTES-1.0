@@ -21,5 +21,9 @@
 
     <color name="aboutus_txt_clr">#fff</color>
 
+    <color name="edittext_bg">#1891ac</color>
+    <color name="edittext_textcolor">#00E676</color>
+    <color name="edittext_hintcolor">#fff</color>
+
     <color name="guidetextcolor">#7EFDFDFE</color>
 </resources>
