@@ -14,7 +14,9 @@
         android:layout_height="125dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </com.scwang.wave.MultiWaveHeader>
 
 
     <TextView
@@ -86,6 +88,7 @@ style="@style/edittext_style"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:text="Sign Up"
+        style="@style/Widget.MaterialComponents.Button"
         android:padding="10dp"
         android:textSize="15sp"
         android:textColor="#fff"
@@ -101,10 +104,10 @@ style="@style/edittext_style"
         android:id="@+id/createText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/opensans"
         android:text="Already Registered ? Login Here"
         android:textColor="#fff"
-        android:fontFamily="@font/opensans"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,18 +125,5 @@ style="@style/edittext_style"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/createText"
         app:layout_constraintVertical_bias="0.094" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:contentDescription="TODO"
-        android:src="@mipmap/ic_launcher"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.100000024" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

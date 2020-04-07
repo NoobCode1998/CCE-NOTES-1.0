@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.195"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintVertical_bias="0.24000001" />
 
     <EditText
         android:id="@+id/edUID"
@@ -37,7 +37,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogScr"
-        app:layout_constraintVertical_bias="0.732" />
+        app:layout_constraintVertical_bias="0.75" />
 
     <EditText
         android:id="@+id/edUPASS"
@@ -53,7 +53,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LogScr"
-        app:layout_constraintVertical_bias="0.401" />
+        app:layout_constraintVertical_bias="0.35000002" />
 
     <Button
         android:id="@+id/USUB"
@@ -63,14 +63,18 @@
         android:layout_marginEnd="32dp"
         android:background="@drawable/edittext"
         android:text="@string/sign_in"
+        style="@style/Widget.MaterialComponents.Button"
         android:textAlignment="center"
+        android:textSize="15sp"
+        android:fontFamily="@font/opensans"
+        android:textStyle="bold"
         android:textColor="#fff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/edUPASS"
-        app:layout_constraintVertical_bias="0.15" />
+        app:layout_constraintVertical_bias="0.25" />
 
     <TextView
         android:id="@+id/WrAttempt"
