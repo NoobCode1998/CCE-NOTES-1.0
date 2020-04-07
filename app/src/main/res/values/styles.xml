@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -11,7 +11,7 @@
     <style name="splash_theme" parent="Theme.AppCompat.NoActionBar">
     </style>
 
-    <style name="button_theme" parent="Widget.MaterialComponents.Button">
+    <style name="button_theme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:textColor">@color/textclr</item>
         <item name="android:textStyle">bold</item>
         <item name="android:background">@drawable/gradient_button</item>
@@ -30,7 +30,7 @@
         <item name="cardBackgroundColor">@color/btn_round_clr</item>
 
     </style>
-<style name="category_btn_theme" parent="Widget.MaterialComponents.Button">
+<style name="category_btn_theme" parent="Theme.AppCompat.Light.DarkActionBar">
     <item name="android:textColor">@color/textclr</item>
     <item name="android:textAlignment">center</item>
     <item name="android:textSize">50sp</item>
@@ -44,7 +44,8 @@
         <item name="android:background">@drawable/edittext</item>
         <item name="android:padding">10dp</item>
         <item name="android:ems">10</item>
-        <item name="android:paddingStart">25dp</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:drawablePadding">10dp</item>
         <item name="android:fontFamily">@font/opensans</item>
         <item name="android:textColor">@color/edittext_textcolor</item>
        <item name="android:textColorHint">@color/edittext_hintcolor</item>

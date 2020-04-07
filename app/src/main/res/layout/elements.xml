@@ -64,7 +64,7 @@
                     android:layout_marginEnd="15dp"
                     android:background="@drawable/download_circle_button_gradient"
                     android:elevation="7dp"
-                    android:foreground="@android:drawable/stat_sys_download"
+                    android:foreground="@drawable/ic_file_download_black_24dp"
                     android:foregroundGravity="center" />
 
             </LinearLayout>

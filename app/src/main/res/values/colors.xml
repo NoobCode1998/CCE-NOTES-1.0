@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <color name="colorPrimary">#1891ac</color>
-    <color name="colorPrimaryDark">#1f5f8b</color>
+    <color name="colorPrimary">#00766c </color>
+    <color name="colorPrimaryDark">#005b4f </color>
     <color name="colorAccent">#14ffec</color>
 
 
 
-    <color name="down_clr">#1f5f8b</color>
-    <color name="background">#1f5f8b</color>
-    <color name="btn_round_clr">#1891ac</color>
+    <color name="down_clr">#64d8cb</color>
+    <color name="background">#26a69a</color>
+    <color name="btn_round_clr">#64d8cb</color>
 
-    <color name="textclr">#b3e5fc</color>
+    <color name="textclr">#FFFFFF</color>
 
 
-    <color name="wave_start">#1f5f8b</color>
-    <color name="wave_end">#1891ac</color>
+    <color name="wave_start">#005b4f</color>
+    <color name="wave_end">#26a69a</color>
 
-    <color name="upload_btn_clr">#00E676</color>
+    <color name="upload_btn_clr">#26a69a</color>
 
     <color name="aboutus_txt_clr">#fff</color>
 
-    <color name="edittext_bg">#1891ac</color>
-    <color name="edittext_textcolor">#00E676</color>
-    <color name="edittext_hintcolor">#fff</color>
+    <color name="edittext_bg">#4db6ac</color>
+    <color name="edittext_textcolor">#FFFFFF</color>
+    <color name="edittext_hintcolor">#FFFFFF</color>
 
     <color name="guidetextcolor">#7EFDFDFE</color>
 </resources>
