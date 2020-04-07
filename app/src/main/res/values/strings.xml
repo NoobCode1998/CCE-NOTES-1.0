@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CCE NOTES</string>
+    <string name="cce_notes">CCE NOTES</string>
+    <string name="name">Name</string>
+    <string name="physics">Physics</string>
+    <string name="chemistry">Chemistry</string>
+    <string name="mechanics">Mechanics</string>
+    <string name="graphics">Graphics</string>
+    <string name="mathematics">Mathematics</string>
+    <string name="basics_of_electrical">Basics of Electrical</string>
+    <string name="basics_of_electronics">Basics of Electronics</string>
+    <string name="basics_of_mechanical">Basics of Mechanical</string>
+    <string name="basics_of_civil">Basics of Civil</string>
+    <string name="computer_programing">Computer Programing</string>
+    <string name="s2">S2</string>
+    <string name="s4">S4</string>
+    <string name="s6">S6</string>
+    <string name="s8">S8</string>
+    <string name="names">name</string>
+    <string name="upload">Upload</string>
+    <string name="enter_the_name_of_the_file">Enter the filename</string>
+    <string name="upload_here">Upload Here</string>
+
+</resources>

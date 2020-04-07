@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#1891ac</color>
+    <color name="colorPrimaryDark">#1f5f8b</color>
+    <color name="colorAccent">#14ffec</color>
+
+
+
+    <color name="down_clr">#1f5f8b</color>
+    <color name="background">#1f5f8b</color>
+    <color name="btn_round_clr">#1891ac</color>
+
+    <color name="textclr">#b3e5fc</color>
+
+
+    <color name="wave_start">#1f5f8b</color>
+    <color name="wave_end">#1891ac</color>
+
+    <color name="upload_btn_clr">#00E676</color>
+
+    <color name="aboutus_txt_clr">#fff</color>
+
+    <color name="guidetextcolor">#7EFDFDFE</color>
+</resources>
