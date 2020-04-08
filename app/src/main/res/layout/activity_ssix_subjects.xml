@@ -26,7 +26,7 @@
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Compiler Design"
+                android:text="@string/compiler_design"
                 />
 
             <Button
@@ -34,35 +34,35 @@
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Computer Networks" />
+                android:text="@string/computer_networks" />
 
             <Button
                 android:id="@+id/s6_btn_WT_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Web Technology" />
+                android:text="@string/web_technology" />
 
             <Button
                 android:id="@+id/s6_btn_POM_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Principles of Management" />
+                android:text="@string/principles_of_management" />
 
             <Button
                 android:id="@+id/s6_btn_DAAOA_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Design and Analysis of Algorithms" />
+                android:text="@string/design_and_analysis_of_algorithms" />
 
             <Button
                 android:id="@+id/s6_btn_SEAPM_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Software Engineering and Project Management" />
+                android:text="@string/software_engineering_and_project_management" />
 
         </LinearLayout>
     </ScrollView>

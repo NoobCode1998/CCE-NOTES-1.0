@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(isNetworkConnected()==false)
         {
-            Toast.makeText(getApplicationContext(),"You need internet to function",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"You will need internet connection",Toast.LENGTH_LONG).show();
         }
 
 

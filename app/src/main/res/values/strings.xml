@@ -21,5 +21,19 @@
     <string name="enter_the_name_of_the_file">Enter the filename</string>
     <string name="upload_here">Upload Here</string>
     <string name="sign_in">Sign In</string>
+    <string name="code_app_development_team">CODE App Development Team</string>
+    <string name="app_developed_and_maintained_by_ncode_app_development_team_from_nchrist_college_of_engineering">App Developed and Maintained by CODE App Development Team from Christ College of Engineering</string>
+    <string name="developers">Developers</string>
+    <string name="jacob_ranjit">Jacob Ranjit</string>
+    <string name="cyril_paul">Cyril Paul</string>
+    <string name="simon_nelse">Simon Nelse</string>
+    <string name="ashkar_yaseen_logo">Ashkar Yaseen(Logo)</string>
+    <string name="todo">TODO</string>
+    <string name="compiler_design">Compiler Design</string>
+    <string name="computer_networks">Computer Networks</string>
+    <string name="web_technology">Web Technology</string>
+    <string name="principles_of_management">Principles of Management</string>
+    <string name="design_and_analysis_of_algorithms">Design and Analysis of Algorithms</string>
+    <string name="software_engineering_and_project_management">Software Engineering and Project Management</string>
 
 </resources>
