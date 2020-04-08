@@ -22,13 +22,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/s4_btn_maths_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/mathematics" />
-
-            <Button
                 android:id="@+id/s4_btn_OS_id"
                 style="@style/button_theme"
 
@@ -45,12 +38,27 @@
                 android:text="@string/digital_systems_lab" />
 
             <Button
+                android:id="@+id/s4_btn_maths_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mathematics" />
+
+            <Button
                 android:id="@+id/s4_btn_PDD_id"
                 style="@style/button_theme"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/principles_of_database_design" />
+
+            <Button
+                android:id="@+id/s4_btn_FAOSSL_id"
+                style="@style/button_theme"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/free_and_open_source_software_lab" />
 
             <Button
                 android:id="@+id/s4_btn_COAA_id"
@@ -67,14 +75,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/object_oriented_design_and_programming" />
-
-            <Button
-                android:id="@+id/s4_btn_FAOSSL_id"
-                style="@style/button_theme"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/free_and_open_source_software_lab" />
 
         </LinearLayout>
     </ScrollView>

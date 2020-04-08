@@ -310,10 +310,9 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(id==R.id.open_downloads_id){
-            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
-            Uri uri = Uri.parse("/storage/self/primary/Android/data/com.jcupzz.ccenotes/files");
-            intent.setDataAndType(uri, "text/csv");
-            startActivity(Intent.createChooser(intent, "Open folder"));
+            Intent i = new Intent();
+            i.setAction(DownloadManager.ACTION_VIEW_DOWNLOADS);
+            startActivity(i);
         }
 
         if (id == R.id.signOut_id) {
