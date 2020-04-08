@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
             dataFromFirebase();
         }
         else if(i==4||i==6||i==8)
-            {
+        {
             dataFromFirebases6s4s8();
         }
 
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity {
         //db=FirebaseFirestore.getInstance();
 
 
-db.collection(STwoSubjects.var)
+        db.collection(STwoSubjects.var)
                 .get()
                 .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
                     @Override
@@ -239,7 +239,7 @@ db.collection(STwoSubjects.var)
     }
 
     private void dataFromFirebases6s4s8() {
-      if(downModelArrayList.size()>0)
+        if(downModelArrayList.size()>0)
             downModelArrayList.clear();
 
         //db=FirebaseFirestore.getInstance();
@@ -280,7 +280,7 @@ db.collection(STwoSubjects.var)
         {
             case 121:
 
-               deletefirebasefirestore();
+                deletefirebasefirestore();
                 return true;
         }
         return super.onContextItemSelected(item);

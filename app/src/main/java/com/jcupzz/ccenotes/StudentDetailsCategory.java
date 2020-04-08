@@ -73,18 +73,18 @@ public class StudentDetailsCategory extends MainActivity  {
 
 
 
-btn_s2.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        Intent s2 = new Intent(StudentDetailsCategory.this,STwoSubjects.class);
-        startActivity(s2);
-        i=2;
-    }
-});
+        btn_s2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent s2 = new Intent(StudentDetailsCategory.this,STwoSubjects.class);
+                startActivity(s2);
+                i=2;
+            }
+        });
         btn_s4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-i=4;
+                i=4;
                 Intent s4 = new Intent(StudentDetailsCategory.this,SFourSubjects.class);
                 startActivity(s4);
             }
@@ -92,7 +92,7 @@ i=4;
         btn_s6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-    i=6;
+                i=6;
                 Intent s6 = new Intent(StudentDetailsCategory.this,SSixSubjects.class);
                 startActivity(s6);
             }
@@ -100,7 +100,7 @@ i=4;
         btn_s8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-        i=8;
+                i=8;
                 Intent s8 = new Intent(StudentDetailsCategory.this,SEightSubjects.class);
                 startActivity(s8);
             }
