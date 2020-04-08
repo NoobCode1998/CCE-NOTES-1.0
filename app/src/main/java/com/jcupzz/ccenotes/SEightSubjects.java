@@ -28,7 +28,7 @@ public class SEightSubjects extends AppCompatActivity implements View.OnClickLis
         SharedPreferences sharedpreferences = getSharedPreferences("loginSave",
                 MODE_PRIVATE);
         SharedPreferences.Editor myEdit = sharedpreferences.edit();
-        String acc = sharedpreferences.getString("staff", "");;
+        String acc = sharedpreferences.getString("staff", "");
         if(!(acc.equals("1")||acc.equals("0")))
         {
             startActivity(new Intent(getApplicationContext(),Register.class));

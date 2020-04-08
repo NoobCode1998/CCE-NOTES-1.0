@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
 
         if(isNetworkConnected()==false)
         {
-            Toast.makeText(getApplicationContext(),"You need internet to function",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"You will need Internet Connection",Toast.LENGTH_LONG).show();
         }
 
 
@@ -310,9 +310,10 @@ public class MainActivity extends AppCompatActivity {
         }
 
         if(id==R.id.open_downloads_id){
-            Intent i = new Intent();
-            i.setAction(DownloadManager.ACTION_VIEW_DOWNLOADS);
-            startActivity(i);
+            Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+            Uri uri = Uri.parse("/storage/self/primary/Android/data/com.jcupzz.ccenotes/files");
+            intent.setDataAndType(uri, "application/pdf");
+            startActivity(Intent.createChooser(intent, "Open folder"));
         }
 
         if (id == R.id.signOut_id) {
