@@ -274,6 +274,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
@@ -341,9 +342,8 @@ public class MainActivity extends AppCompatActivity {
             Intent myIntent = new Intent(MainActivity.this,  Register.class);
 
             MainActivity.this.startActivity(myIntent);
-
-
             return true;
+
         }
         return super.onOptionsItemSelected(item);
     }

@@ -21,5 +21,6 @@
     <string name="enter_the_name_of_the_file">Enter the filename</string>
     <string name="upload_here">Upload Here</string>
     <string name="sign_in">Sign In</string>
+    <string name="logo">LOGO</string>
 
 </resources>
