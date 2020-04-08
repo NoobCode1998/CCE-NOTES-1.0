@@ -22,6 +22,13 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/s6_btn_WT_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/web_technology" />
+
+            <Button
                 android:id="@+id/s6_btn_CD_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
@@ -35,13 +42,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/computer_networks" />
-
-            <Button
-                android:id="@+id/s6_btn_WT_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/web_technology" />
 
             <Button
                 android:id="@+id/s6_btn_POM_id"
