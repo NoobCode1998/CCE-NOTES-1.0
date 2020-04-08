@@ -27,13 +27,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/s2_btn_cs"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/computer_programing" />
-
-            <Button
                 android:id="@+id/s2_btn_physics"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
@@ -96,6 +89,12 @@
                 android:layout_height="wrap_content"
                 android:text="@string/basics_of_mechanical" />
 
+            <Button
+                android:id="@+id/s2_btn_cs"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/computer_programing" />
         </LinearLayout>
     </ScrollView>
 
