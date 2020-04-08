@@ -85,6 +85,14 @@ public class Login extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(getApplicationContext(),Register.class);
+        startActivity(intent);
+        finish();
+    }
+
 
     private void validate(final String userName, final String userPass) {
 

@@ -56,9 +56,11 @@ public class Register extends AppCompatActivity {
     String staff = "-1";
 
 
-
-
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

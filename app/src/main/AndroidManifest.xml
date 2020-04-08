@@ -15,22 +15,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PdfViewer"></activity>
-        <activity android:name=".Register" />
-        <activity android:name=".Login" />
-        <activity android:name=".UploadActivity" />
-        <activity android:name=".AboutUs" />
-        <activity android:name=".SEightSubjects" />
-        <activity android:name=".SSixSubjects" />
-        <activity android:name=".SFourSubjects" />
-        <activity android:name=".STwoSubjects" />
+        <activity android:name=".PdfViewer"/>
+        <activity android:name=".Register"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Login"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UploadActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutUs"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SEightSubjects"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SSixSubjects"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SFourSubjects"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".STwoSubjects"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".StudentDetailsCategory"
             android:screenOrientation="portrait" />
         <activity
             android:name=".StudentTeacherCategory"
             android:screenOrientation="portrait" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name=".MainActivity" />
 
