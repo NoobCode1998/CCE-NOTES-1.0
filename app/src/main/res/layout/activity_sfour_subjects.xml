@@ -26,7 +26,7 @@
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mathematics" />
+                android:text="@string/mathematics" />
 
             <Button
                 android:id="@+id/s4_btn_OS_id"
@@ -34,7 +34,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Operating Systems" />
+                android:text="@string/operating_systems" />
 
             <Button
                 android:id="@+id/s4_btn_DSL_id"
@@ -42,7 +42,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Digital Systems Lab" />
+                android:text="@string/digital_systems_lab" />
 
             <Button
                 android:id="@+id/s4_btn_PDD_id"
@@ -50,7 +50,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Principles of Database Design" />
+                android:text="@string/principles_of_database_design" />
 
             <Button
                 android:id="@+id/s4_btn_COAA_id"
@@ -58,7 +58,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Computer Organization and Architecture" />
+                android:text="@string/computer_organization_and_architecture" />
 
             <Button
                 android:id="@+id/s4_btn_OPDAP_id"
@@ -66,7 +66,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Object Oriented Design and Programming" />
+                android:text="@string/object_oriented_design_and_programming" />
 
             <Button
                 android:id="@+id/s4_btn_FAOSSL_id"
@@ -74,7 +74,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Free and Open Source Software Lab" />
+                android:text="@string/free_and_open_source_software_lab" />
 
         </LinearLayout>
     </ScrollView>

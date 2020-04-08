@@ -35,5 +35,20 @@
     <string name="principles_of_management">Principles of Management</string>
     <string name="design_and_analysis_of_algorithms">Design and Analysis of Algorithms</string>
     <string name="software_engineering_and_project_management">Software Engineering and Project Management</string>
+    <string name="data_mining">Data Mining</string>
+    <string name="fuzzy_set_theory">Fuzzy Set Theory</string>
+    <string name="cloud_computing">Cloud Computing</string>
+    <string name="embedded_systems">Embedded Systems</string>
+    <string name="artificial_intelligence">Artificial Intelligence</string>
+    <string name="principles_of_information_security">Principles of Information Security</string>
+    <string name="mathematics2">Mathematics</string>
+    <string name="operating_systems">Operating Systems</string>
+    <string name="digital_systems_lab">Digital Systems Lab</string>
+    <string name="principles_of_database_design">Principles of Database Design</string>
+    <string name="computer_organization_and_architecture">Computer Organization and Architecture</string>
+    <string name="object_oriented_design_and_programming">Object Oriented Design and Programming</string>
+    <string name="free_and_open_source_software_lab">Free and Open Source Software Lab</string>
+    <string name="cce_notess">CCE NOTES</string>
+    <string name="todoss">TODO</string>
 
 </resources>

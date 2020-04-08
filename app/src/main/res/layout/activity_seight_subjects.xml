@@ -26,42 +26,42 @@
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Data Mining" />
+                android:text="@string/data_mining" />
 
             <Button
                 android:id="@+id/s8_btn_FST_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fuzzy Set Theory" />
+                android:text="@string/fuzzy_set_theory" />
 
             <Button
                 android:id="@+id/s8_btn_CC_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Cloud Computing" />
+                android:text="@string/cloud_computing" />
 
             <Button
                 android:id="@+id/s8_btn_ES_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Embedded Systems" />
+                android:text="@string/embedded_systems" />
 
             <Button
                 android:id="@+id/s8_btn_AI_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Artificial Intelligence" />
+                android:text="@string/artificial_intelligence" />
 
             <Button
                 android:id="@+id/s8_btn_POIS_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Principles of Information Security" />
+                android:text="@string/principles_of_information_security" />
         </LinearLayout>
     </ScrollView>
 
