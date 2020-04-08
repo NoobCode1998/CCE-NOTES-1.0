@@ -152,20 +152,15 @@ public class MainActivity extends AppCompatActivity {
             s4s6s8var = "S8_CSE_DM";
         }
         if(i==8&&j==2){
-            s4s6s8var = "S8_CSE_FST";
+            s4s6s8var = "S8_CSE_EIA";
         }
         if(i==8&&j==3){
-            s4s6s8var = "S8_CSE_CC";
-        }
-        if(i==8&&j==4){
             s4s6s8var = "S8_CSE_ES";
         }
-        if(i==8&&j==5){
-            s4s6s8var = "S8_CSE_AI";
-        }
-        if(i==8&&j==6){
+        if(i==8&&j==4){
             s4s6s8var = "S8_CSE_POIS";
         }
+
 
 
 

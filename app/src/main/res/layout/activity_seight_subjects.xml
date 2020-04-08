@@ -22,27 +22,6 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/s8_btn_DM_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/data_mining" />
-
-            <Button
-                android:id="@+id/s8_btn_FST_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/fuzzy_set_theory" />
-
-            <Button
-                android:id="@+id/s8_btn_CC_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/cloud_computing" />
-
-            <Button
                 android:id="@+id/s8_btn_ES_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
@@ -50,11 +29,18 @@
                 android:text="@string/embedded_systems" />
 
             <Button
-                android:id="@+id/s8_btn_AI_id"
+                android:id="@+id/s8_btn_DM_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/artificial_intelligence" />
+                android:text="@string/data_mining" />
+
+            <Button
+                android:id="@+id/s8_btn_EIA_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fuzzy_set_theory" />
 
             <Button
                 android:id="@+id/s8_btn_POIS_id"

@@ -35,11 +35,9 @@
     <string name="principles_of_management">Principles of Management</string>
     <string name="design_and_analysis_of_algorithms">Design and Analysis of Algorithms</string>
     <string name="software_engineering_and_project_management">Software Engineering and Project Management</string>
-    <string name="data_mining">Data Mining</string>
-    <string name="fuzzy_set_theory">Fuzzy Set Theory</string>
-    <string name="cloud_computing">Cloud Computing</string>
+    <string name="data_mining">Data Mining and Ware Housing</string>
+    <string name="fuzzy_set_theory">Environment Impact Assessment</string>
     <string name="embedded_systems">Embedded Systems</string>
-    <string name="artificial_intelligence">Artificial Intelligence</string>
     <string name="principles_of_information_security">Principles of Information Security</string>
     <string name="mathematics2">Mathematics</string>
     <string name="operating_systems">Operating Systems</string>
