@@ -3,6 +3,7 @@ package com.jcupzz.ccenotes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -52,6 +53,19 @@ public static String var;
         s2_btn_chemistry.setOnClickListener(this);
         s2_btn_mathematics.setOnClickListener(this);
         s2_btn_graphics.setOnClickListener(this);
+        //logout
+        SharedPreferences sharedpreferences = getSharedPreferences("loginSave",
+                MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sharedpreferences.edit();
+        String acc = sharedpreferences.getString("staff", "");;
+        if(!(acc.equals("1")||acc.equals("0")))
+        {
+            startActivity(new Intent(getApplicationContext(),Register.class));
+            finish();
+        }
+
+
+        //logout
 
 
 

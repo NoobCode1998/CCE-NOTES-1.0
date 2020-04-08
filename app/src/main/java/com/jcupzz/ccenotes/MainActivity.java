@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
         upload_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                finish();
                 Intent intent = new Intent(MainActivity.this,UploadActivity.class);
                 startActivity(intent);
             }

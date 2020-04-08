@@ -3,6 +3,7 @@ package com.jcupzz.ccenotes;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -24,6 +25,17 @@ public class SEightSubjects extends AppCompatActivity implements View.OnClickLis
         setContentView(R.layout.activity_seight_subjects);
 
 
+        SharedPreferences sharedpreferences = getSharedPreferences("loginSave",
+                MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = sharedpreferences.edit();
+        String acc = sharedpreferences.getString("staff", "");;
+        if(!(acc.equals("1")||acc.equals("0")))
+        {
+            startActivity(new Intent(getApplicationContext(),Register.class));
+            finish();
+        }
+
+
         s8_btn_dm = findViewById(R.id.s8_btn_DM_id);
         s8_btn_fst = findViewById(R.id.s8_btn_FST_id);
         s8_btn_cc = findViewById(R.id.s8_btn_CC_id);
@@ -38,6 +50,8 @@ public class SEightSubjects extends AppCompatActivity implements View.OnClickLis
         s8_btn_cc.setOnClickListener(this);
         s8_btn_fst.setOnClickListener(this);
         s8_btn_dm.setOnClickListener(this);
+
+
 
 
 

@@ -73,7 +73,6 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:textColor="@color/aboutus_txt_clr"
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -83,12 +82,15 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="32dp"
         android:text="Developers"
+        android:textColor="@color/aboutus_txt_clr"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintHorizontal_bias="0.119"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.019" />
 
     <TextView
         android:id="@+id/textView5"
@@ -137,9 +139,9 @@
         android:layout_alignParentBottom="true"
         android:text="Simon Nelse"
         android:textAlignment="center"
+        android:textColor="@color/aboutus_txt_clr"
         android:textSize="18sp"
         android:typeface="monospace"
-        android:textColor="@color/aboutus_txt_clr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.224"
         app:layout_constraintStart_toStartOf="parent"

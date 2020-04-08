@@ -140,9 +140,12 @@ if(i==2) {
             .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
+                    finish();
                     Toast.makeText(getApplicationContext(),"Successfully Uploaded!!!",Toast.LENGTH_SHORT).show();
                     Intent intentd = new Intent(UploadActivity.this,MainActivity.class);
+
                     startActivity(intentd);
+                   // finish();
                 }
             })
             .addOnFailureListener(new OnFailureListener() {
@@ -160,6 +163,7 @@ else if(i==4||i==6||i==8)
             .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
+                    finish();
                     Toast.makeText(getApplicationContext(),"Successfully Uploaded!!!",Toast.LENGTH_SHORT).show();
                     Intent intentz = new Intent(UploadActivity.this,MainActivity.class);
                     startActivity(intentz);
