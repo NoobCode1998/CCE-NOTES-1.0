@@ -69,7 +69,7 @@ mCardView.setOnClickListener(this);
             File file = new File(path);
             //Toast.makeText(v.getContext(),path,Toast.LENGTH_SHORT).show();
             if (file.exists()) {
-                Toast.makeText(v.getContext(), "Opening "+he+".pdf "+"!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(v.getContext(), "Opening "+he, Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), PdfViewer.class);
                 v.getContext().startActivity(intent);
             } else {

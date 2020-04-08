@@ -77,13 +77,14 @@ btn_upload.setOnClickListener(new View.OnClickListener() {
             selectPDFFile();
         } else {
             // No user is signed in
-            Toast.makeText(getApplicationContext(),"Please enter the filename!",Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(),"Please enter the filename",Toast.LENGTH_SHORT).show();
         }
         //selectPDFFile();
 
+
+
     }
 });
-
 
 
     }
@@ -97,6 +98,7 @@ btn_upload.setOnClickListener(new View.OnClickListener() {
 
 
     }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -113,7 +115,8 @@ btn_upload.setOnClickListener(new View.OnClickListener() {
     private void uploadPDFFile(final Uri data) {
 
         final ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setTitle("Uploading!!! ");
+        progressDialog.setTitle("Uploading");
+        progressDialog.setIcon(R.drawable.ic_cloud_upload_black_24dp);
         progressDialog.show();
         STRING_NAME_OF_PDF=editPDFName.getText().toString();
  StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+".pdf");
@@ -140,7 +143,7 @@ if(i==2) {
             .addOnSuccessListener(new OnSuccessListener<Void>() {
                 @Override
                 public void onSuccess(Void aVoid) {
-                    Toast.makeText(getApplicationContext(),"Successfully Uploaded!!!",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Successfully Uploaded",Toast.LENGTH_SHORT).show();
                     Intent intentd = new Intent(UploadActivity.this,MainActivity.class);
                     startActivity(intentd);
                 }
@@ -163,6 +166,7 @@ else if(i==4||i==6||i==8)
                     Toast.makeText(getApplicationContext(),"Successfully Uploaded!!!",Toast.LENGTH_SHORT).show();
                     Intent intentz = new Intent(UploadActivity.this,MainActivity.class);
                     startActivity(intentz);
+
                 }
             })
             .addOnFailureListener(new OnFailureListener() {
@@ -187,6 +191,6 @@ progressDialog.setMessage("Uploaded "+(int)progress+"%");
     }
 });
 
-
     }
+
 }

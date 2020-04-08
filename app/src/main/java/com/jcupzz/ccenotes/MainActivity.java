@@ -273,6 +273,7 @@ db.collection(STwoSubjects.var)
 
     }
 
+
     @Override
     public boolean onContextItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId())
@@ -340,9 +341,8 @@ db.collection(STwoSubjects.var)
             Intent myIntent = new Intent(MainActivity.this,  Register.class);
 
             MainActivity.this.startActivity(myIntent);
-
-
             return true;
+
         }
         return super.onOptionsItemSelected(item);
     }
