@@ -58,8 +58,8 @@ public class Register extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
-        finish();
+        finishAffinity();
+
     }
 
     @Override
