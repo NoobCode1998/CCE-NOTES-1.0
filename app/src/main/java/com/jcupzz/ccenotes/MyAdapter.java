@@ -51,7 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
         request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
-        Toast.makeText(context,"Downloading!!!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(context,"Downloading", Toast.LENGTH_SHORT).show();
         //request.setDestinationInExternalPublicDir(context,destinationDirectory,fileName+fileExtension);
         downloadmanager.enqueue(request);
 
