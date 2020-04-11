@@ -190,7 +190,6 @@ public class MainActivity extends AppCompatActivity {
         if(downModelArrayList.size()>0)
             downModelArrayList.clear();
 
-        //db=FirebaseFirestore.getInstance();
 
 
         db.collection(STwoSubjects.var)
@@ -237,7 +236,6 @@ public class MainActivity extends AppCompatActivity {
         if(downModelArrayList.size()>0)
             downModelArrayList.clear();
 
-        //db=FirebaseFirestore.getInstance();
 
 
         db.collection(s4s6s8var)

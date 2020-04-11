@@ -56,10 +56,10 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        name = (EditText) findViewById(R.id.edUID);
-        pass = (EditText) findViewById(R.id.edUPASS);
-        login = (Button) findViewById(R.id.USUB);
-        wrAtmt = (TextView) findViewById(R.id.WrAttempt);
+        name =  findViewById(R.id.edUID);
+        pass =  findViewById(R.id.edUPASS);
+        login = findViewById(R.id.USUB);
+        wrAtmt =  findViewById(R.id.WrAttempt);
 
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -70,7 +70,6 @@ public class Login extends AppCompatActivity {
             startActivity(new Intent(Login.this, StudentDetailsCategory.class));
 
             finish();
-            //startActivity(new Intent(Login.this, StudentDetailsCategory.class));
         }
 
 
