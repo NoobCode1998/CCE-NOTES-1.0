@@ -29,6 +29,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
 
 
 
+
     public MyAdapter(MainActivity mainActivity, ArrayList<DownModel> downModels) {
         this.mainActivity = mainActivity;
         this.downModels = downModels;
@@ -50,7 +51,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         DownloadManager.Request request = new DownloadManager.Request(uri);
 
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName + fileExtension);
+        request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName+"("+MainActivity.s4s6s8var+")"+fileExtension);
         Toast.makeText(context,"Downloading", Toast.LENGTH_SHORT).show();
         //request.setDestinationInExternalPublicDir(context,destinationDirectory,fileName+fileExtension);
         downloadmanager.enqueue(request);

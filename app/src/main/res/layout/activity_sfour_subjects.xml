@@ -38,6 +38,13 @@
                 android:text="@string/digital_systems_lab" />
 
             <Button
+                android:id="@+id/s4_btn_BE_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/business_economics" />
+
+            <Button
                 android:id="@+id/s4_btn_maths_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"

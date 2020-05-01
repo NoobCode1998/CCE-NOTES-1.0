@@ -7,11 +7,11 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import static com.jcupzz.ccenotes.SFourSubjects.j;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class STwoSubjects extends AppCompatActivity implements View.OnClickListener{
-    public static String var;
     Button s2_btn_physics;
     Button s2_btn_chemistry;
     Button s2_btn_graphics;
@@ -22,7 +22,6 @@ public class STwoSubjects extends AppCompatActivity implements View.OnClickListe
     Button s2_btn_cs;
     Button s2_btn_basics_of_mechanical;
     Button s2_btn_basics_of_civil;
-    public static int s2_u_n;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,34 +76,34 @@ public class STwoSubjects extends AppCompatActivity implements View.OnClickListe
         startActivity(intent);
         switch (v.getId()) {
             case R.id.s2_btn_physics:
-                var = "Physics";
+                j=1;
                 break;
             case R.id.s2_btn_chemistry:
-                var = "Chemistry";
+                j=2;
                 break;
             case R.id.s2_btn_graphics:
-                var = "Graphics";
+                j=3;
                 break;
             case R.id.s2_btn_basics_of_mechanics:
-                var = "Mechanics";
+                j=4;
                 break;
             case R.id.s2_btn_basics_of_mechanical:
-                var = "Mechanical";
+                j=5;
                 break;
             case R.id.s2_btn_basics_of_civil:
-                var = "Civil";
+                j=6;
                 break;
             case R.id.s2_btn_cs:
-                var = "Cs";
+                j=7;
                 break;
             case R.id.s2_btn_mathematics:
-                var = "Mathematics";
+                j=8;
                 break;
             case R.id.s2_btn_basics_of_electrical:
-                var = "Electrical";
+                j=9;
                 break;
             case R.id.s2_btn_basics_of_electronics:
-                var = "Electronics";
+                j=10;
                 break;
 
         }

@@ -117,7 +117,7 @@ public class UploadActivity extends AppCompatActivity {
         progressDialog.setIcon(R.drawable.ic_cloud_upload_black_24dp);
         progressDialog.show();
         STRING_NAME_OF_PDF=editPDFName.getText().toString();
-        StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+".pdf");
+        StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+MainActivity.s4s6s8var+".pdf");
         reference.putFile(data)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -134,31 +134,8 @@ public class UploadActivity extends AppCompatActivity {
 
 
 
-                        if(i==2) {
 
-                            db.collection(STwoSubjects.var)
-                                    .document(STRING_NAME_OF_PDF).set(downModel)
-                                    .addOnSuccessListener(new OnSuccessListener<Void>() {
-                                        @Override
-                                        public void onSuccess(Void aVoid) {
-                                            finish();
-                                            Toast.makeText(getApplicationContext(),"Successfully Uploaded",Toast.LENGTH_SHORT).show();
-                                            Intent intentd = new Intent(UploadActivity.this,MainActivity.class);
 
-                                            startActivity(intentd);
-                                            // finish();
-                                        }
-                                    })
-                                    .addOnFailureListener(new OnFailureListener() {
-                                        @Override
-                                        public void onFailure(@NonNull Exception e) {
-
-                                        }
-                                    });
-
-                        }
-                        else if(i==4||i==6||i==8)
-                        {
                             db.collection(MainActivity.s4s6s8var)
                                     .document(STRING_NAME_OF_PDF).set(downModel)
                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -177,7 +154,7 @@ public class UploadActivity extends AppCompatActivity {
                                         }
                                     });
 
-                        }
+
 
 
 

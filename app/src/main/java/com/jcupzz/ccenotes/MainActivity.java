@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     public static String path;
 
     Button upload_btn;
-    String dif;
     SharedPreferences sharedpreferences;
 
 
@@ -101,6 +100,47 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //s2
+        if(i==2&&j==1)
+        {
+            s4s6s8var = "Physics";
+        }
+        if(i==2&&j==2)
+        {
+            s4s6s8var = "Chemistry";
+        }
+        if(i==2&&j==3)
+        {
+            s4s6s8var = "Graphics";
+        }
+        if(i==2&&j==4)
+        {
+            s4s6s8var = "Mechanics";
+        }
+        if(i==2&&j==5)
+        {
+            s4s6s8var = "Mechanical";
+        }
+        if(i==2&&j==6)
+        {
+            s4s6s8var = "Civil";
+        }
+        if(i==2&&j==7)
+        {
+            s4s6s8var = "Cs";
+        }
+        if(i==2&&j==8)
+        {
+            s4s6s8var = "Mathematics";
+        }
+        if(i==2&&j==9)
+        {
+            s4s6s8var = "Electrical";
+        }
+        if(i==2&&j==10)
+        {
+            s4s6s8var = "Electronics";
+        }
 
         //s4
         if(i==4&&j==1){
@@ -123,6 +163,9 @@ public class MainActivity extends AppCompatActivity {
         }
         if(i==4&&j==7){
             s4s6s8var = "S4_CSE_FAOSSL";
+        }
+        if(i==4&&j==8){
+            s4s6s8var = "S4_CSE_BE";
         }
 
 
@@ -169,57 +212,14 @@ public class MainActivity extends AppCompatActivity {
 
         setUpFB();
         setUpRV();
-        if(i==2) {
-            dataFromFirebase();
-        }
-        else if(i==4||i==6||i==8)
-        {
-            dataFromFirebases6s4s8();
-        }
+        dataFromFirebase();
 
 
 
     }
 
-    public void opens() {
-
-    }
 
 
-    private void dataFromFirebase() {
-        if(downModelArrayList.size()>0)
-            downModelArrayList.clear();
-
-
-
-        db.collection(STwoSubjects.var)
-                .get()
-                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        for(DocumentSnapshot documentSnapshot: task.getResult()) {
-
-                            DownModel downModel= new DownModel(documentSnapshot.getString("name"),
-                                    documentSnapshot.getString("link"));
-                            downModelArrayList.add(downModel);
-
-                        }
-
-                        myAdapter= new MyAdapter(MainActivity.this,downModelArrayList);
-                        mRecyclerView.setAdapter(myAdapter);
-                    }
-                })
-
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Toast.makeText(MainActivity.this, "Error ;-.-;", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-
-
-    }
 
 
     private void setUpFB(){
@@ -232,7 +232,7 @@ public class MainActivity extends AppCompatActivity {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
 
-    private void dataFromFirebases6s4s8() {
+    private void dataFromFirebase() {
         if(downModelArrayList.size()>0)
             downModelArrayList.clear();
 
@@ -342,16 +342,9 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     public void deletefirebasefirestore() {
-        if(i==2) {
-            dif=STwoSubjects.var;
-        }
-        else if(i==4||i==6||i==8)
-        {
-            dif=s4s6s8var;
-        }
 
 
-        db.collection(dif).document(MyViewHolder.ve)
+        db.collection(s4s6s8var).document(MyViewHolder.ve)
                 .delete()
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
