@@ -40,9 +40,7 @@ public class UploadActivity extends AppCompatActivity {
     EditText editPDFName;
     Button btn_upload;
     StorageReference storageReference;
-    DatabaseReference databaseReference;
     FirebaseFirestore db;
-    public static String Upload_Collection_Str;
     public static String Subject_Module_Name;
     public static String Subject_Module_Link;
     public static String STRING_NAME_OF_PDF;
@@ -117,7 +115,7 @@ public class UploadActivity extends AppCompatActivity {
         progressDialog.setIcon(R.drawable.ic_cloud_upload_black_24dp);
         progressDialog.show();
         STRING_NAME_OF_PDF=editPDFName.getText().toString();
-        StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+MainActivity.s4s6s8var+".pdf");
+        StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+"("+MainActivity.s4s6s8var+")"+".pdf");
         reference.putFile(data)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
