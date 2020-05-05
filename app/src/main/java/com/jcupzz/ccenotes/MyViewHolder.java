@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -48,6 +49,7 @@ TextView mName;
 mCardView= itemView.findViewById(R.id.cardview_id);
 mCardView.setOnCreateContextMenuListener(this);
 mCardView.setOnClickListener(this);
+mDownload.setOnClickListener(this);
 
 
 }
@@ -55,8 +57,12 @@ mCardView.setOnClickListener(this);
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         if(StudentTeacherCategory.stc_integer==1) {
-            menu.add(getAdapterPosition(), 121, 0, "Delete");
+            menu.add(getAdapterPosition(), 121, 2, "Delete");
             ve = mName.getText().toString();
+        }
+        if(StudentTeacherCategory.stc_integer==1) {
+            menu.add(getAdapterPosition(), 122, 1, "Rename");
+
         }
     }
 
@@ -74,6 +80,11 @@ mCardView.setOnClickListener(this);
             } else {
                 Toast.makeText(v.getContext(), "This file is not found in your Storage!", Toast.LENGTH_SHORT).show();
             }
+
+        }
+        if(v.getId()==R.id.down)
+        {
+            Toast.makeText(v.getContext(),"wwww",Toast.LENGTH_SHORT).show();
         }
 
 

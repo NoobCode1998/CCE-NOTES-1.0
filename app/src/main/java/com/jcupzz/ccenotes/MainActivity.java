@@ -15,11 +15,14 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -28,10 +31,12 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 
+import com.google.firebase.firestore.SetOptions;
 import com.google.firebase.storage.StorageReference;
 
 import static com.jcupzz.ccenotes.MyViewHolder.he;
@@ -42,6 +47,9 @@ import static com.jcupzz.ccenotes.StudentDetailsCategory.i;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     FirebaseFirestore db;
@@ -51,7 +59,9 @@ public class MainActivity extends AppCompatActivity {
     StorageReference storageReference;
     public static String s4s6s8var;
     public static String path;
-
+    public static String renamed_edit_text_name;
+    public String rename_linkz;
+    public String temp;
     Button upload_btn;
     SharedPreferences sharedpreferences;
 
@@ -256,6 +266,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 })
 
+
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
@@ -273,12 +284,71 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId())
         {
             case 121:
-
                 deletefirebasefirestore();
+                break;
+            case 122:
+                rename_firebase_firestore();
                 return true;
+
         }
         return super.onContextItemSelected(item);
     }
+//
+    private void rename_firebase_firestore() {
+LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
+View promptView = layoutInflater.inflate(R.layout.rename_prompt, null);
+AlertDialog.Builder alertdialog = new AlertDialog.Builder(MainActivity.this);
+alertdialog.setView(promptView);
+final EditText rename_edit_text = promptView.findViewById(R.id.Rename_edit_text_id);
+alertdialog.setCancelable(false)
+        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                renamed_edit_text_name = rename_edit_text.getText().toString();
+                if(renamed_edit_text_name.equals(MyViewHolder.ve)) {
+                    Toast.makeText(getApplicationContext(),"Filename should be different!!!",Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    rename();
+                }
+            }
+        })
+        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+                Toast.makeText(getApplicationContext(), "Rename Cancelled", Toast.LENGTH_SHORT).show();
+            }
+        });
+alertdialog.create();
+alertdialog.show();
+    }
+
+    private void rename() {
+        final DocumentReference docRef = db.collection(MainActivity.s4s6s8var).document(MyViewHolder.ve);
+        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+
+                if (task.isSuccessful()) {
+                    rename_linkz = task.getResult().getString("link");
+                    DownModel downModels = new DownModel(renamed_edit_text_name,rename_linkz);
+                    Toast.makeText(getApplicationContext(),rename_linkz,Toast.LENGTH_SHORT).show();
+                    db.collection(MainActivity.s4s6s8var).document(renamed_edit_text_name)
+                            .set(downModels);
+                    docRef.delete();
+                    Intent intent = new Intent(MainActivity.this,MainActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+                else {
+
+                }
+            }
+        });
+
+    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
