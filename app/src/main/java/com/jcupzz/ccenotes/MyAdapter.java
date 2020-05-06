@@ -2,30 +2,17 @@ package com.jcupzz.ccenotes;
 
 import android.app.DownloadManager;
 import android.content.Context;
-import android.database.Cursor;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
-import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import androidx.annotation.DrawableRes;
 import androidx.annotation.NonNull;
-import androidx.appcompat.content.res.AppCompatResources;
-import androidx.cardview.widget.CardView;
-import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.firestore.FirebaseFirestore;
-
-import java.io.File;
 import java.util.ArrayList;
 
-import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     MainActivity mainActivity;
@@ -66,6 +53,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     public void onBindViewHolder(@NonNull final MyViewHolder myViewHolder, final int i) {
         myViewHolder.mName.setText(downModels.get(i).getName());
         //myViewHolder.mLink.setText(downModels.get(i).getLink());
+
         myViewHolder.mDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

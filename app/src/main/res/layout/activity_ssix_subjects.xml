@@ -10,7 +10,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,8 +35,7 @@
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/compiler_design"
-                />
+                android:text="@string/compiler_design" />
 
             <Button
                 android:id="@+id/s6_btn_CN_id"
