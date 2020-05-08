@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Enter the Name"
+        android:hint="@string/enter_the_name"
         android:inputType="textPersonName"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
