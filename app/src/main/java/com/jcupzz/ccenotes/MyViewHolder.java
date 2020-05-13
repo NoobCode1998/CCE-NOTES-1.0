@@ -19,6 +19,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 
@@ -80,7 +81,7 @@ mDownload.setOnClickListener(this);
         }
         if(v.getId()==R.id.down)
         {
-            Toast.makeText(v.getContext(),"wwww",Toast.LENGTH_SHORT).show();
+            //mDownload.setForeground(ContextCompat.getDrawable(v.getContext(), R.drawable.ic_file_download_black_24dp));
         }
 
 

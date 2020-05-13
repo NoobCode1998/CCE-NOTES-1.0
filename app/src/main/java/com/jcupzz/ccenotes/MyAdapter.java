@@ -3,21 +3,26 @@ package com.jcupzz.ccenotes;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.net.Uri;
+import android.os.FileUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.File;
 import java.util.ArrayList;
 
 
 public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
     MainActivity mainActivity;
     ArrayList<DownModel> downModels;
-
+public static long DownloadId;
+public Boolean btn_status=true;
+public static Boolean download_completed_status=false;
 
 
 
@@ -44,7 +49,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         request.setDestinationInExternalFilesDir(context, destinationDirectory, fileName+"("+MainActivity.s4s6s8var+")"+fileExtension);
         Toast.makeText(context,"Downloading", Toast.LENGTH_SHORT).show();
         //request.setDestinationInExternalPublicDir(context,destinationDirectory,fileName+fileExtension);
-        downloadmanager.enqueue(request);
+        DownloadId = downloadmanager.enqueue(request);
+
 
     }
 
@@ -57,11 +63,26 @@ public class MyAdapter extends RecyclerView.Adapter<MyViewHolder> {
         myViewHolder.mDownload.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    downloadFile(myViewHolder.mName.getContext(), downModels.get(i).getName(), ".pdf", null, downModels.get(i).getLink());
-                //myViewHolder.mDownload.setForeground(ContextCompat.getDrawable(v.getContext(), R.drawable.ic_check_circle_black_24dp));
+                if(download_completed_status) {
+                    myViewHolder.mDownload.setForeground(ContextCompat.getDrawable(v.getContext(), R.drawable.ic_check_circle_black_24dp));
+                   // download_completed_status = false;
+                } else {
+                    if (btn_status) {
+                        downloadFile(myViewHolder.mName.getContext(), downModels.get(i).getName(), ".pdf", null, downModels.get(i).getLink());
+                        myViewHolder.mDownload.setForeground(ContextCompat.getDrawable(v.getContext(), R.drawable.ic_cancel_black_24dp));
+                        btn_status = false;
+                    } else if (btn_status == false) {
+                        DownloadManager downloadmanager = (DownloadManager) myViewHolder.mName.getContext().getSystemService(Context.DOWNLOAD_SERVICE);
+                        downloadmanager.remove(DownloadId);
+                        myViewHolder.mDownload.setForeground(ContextCompat.getDrawable(v.getContext(), R.drawable.ic_file_download_black_24dp));
+                        btn_status = true;
+                    } else {
+
+                    }
+                }
+
+
             }
-
-
         });
 
 

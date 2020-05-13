@@ -115,7 +115,7 @@ public class UploadActivity extends AppCompatActivity {
         progressDialog.setIcon(R.drawable.ic_cloud_upload_black_24dp);
         progressDialog.show();
         STRING_NAME_OF_PDF=editPDFName.getText().toString();
-        StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+"("+MainActivity.s4s6s8var+")"+".pdf");
+        StorageReference reference = storageReference.child("uploads/"+STRING_NAME_OF_PDF+"("+MainActivity.s4s6s8var+")");
         reference.putFile(data)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override

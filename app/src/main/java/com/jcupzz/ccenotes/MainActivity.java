@@ -44,14 +44,14 @@ import java.util.ArrayList;
 import io.opencensus.resource.Resource;
 
 public class MainActivity extends AppCompatActivity {
-    FirebaseFirestore db;
-    RecyclerView mRecyclerView;
-    ArrayList<DownModel> downModelArrayList = new ArrayList<>();
-    MyAdapter myAdapter;
     public static String s4s6s8var;
     public static String path;
     public static String renamed_edit_text_name;
     public String rename_linkz;
+    FirebaseFirestore db;
+    RecyclerView mRecyclerView;
+    ArrayList<DownModel> downModelArrayList = new ArrayList<>();
+    MyAdapter myAdapter;
     Button upload_btn;
     SharedPreferences sharedpreferences;
 
@@ -282,33 +282,33 @@ public class MainActivity extends AppCompatActivity {
 
     //
     private void rename_firebase_firestore() {
-LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
-View promptView = layoutInflater.inflate(R.layout.rename_prompt, null);
-AlertDialog.Builder alertdialog = new AlertDialog.Builder(MainActivity.this,R.style.AlertDialogStyle_rename);
-alertdialog.setView(promptView);
-final EditText rename_edit_text = promptView.findViewById(R.id.Rename_edit_text_id);
-alertdialog.setCancelable(false)
-        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                renamed_edit_text_name = rename_edit_text.getText().toString();
-                if(renamed_edit_text_name.equals(MyViewHolder.ve)) {
-                    Toast.makeText(getApplicationContext(),"Filename should be different!!!",Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    rename();
-                }
-            }
-        })
-        .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                dialog.cancel();
-                Toast.makeText(getApplicationContext(), "Rename Cancelled", Toast.LENGTH_SHORT).show();
-            }
-        });
-alertdialog.create();
-alertdialog.show();
+        LayoutInflater layoutInflater = LayoutInflater.from(MainActivity.this);
+        View promptView = layoutInflater.inflate(R.layout.rename_prompt, null);
+        AlertDialog.Builder alertdialog = new AlertDialog.Builder(MainActivity.this,R.style.AlertDialogStyle_rename);
+        alertdialog.setView(promptView);
+        final EditText rename_edit_text = promptView.findViewById(R.id.Rename_edit_text_id);
+        alertdialog.setCancelable(false)
+                .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        renamed_edit_text_name = rename_edit_text.getText().toString();
+                        if(renamed_edit_text_name.equals(MyViewHolder.ve)) {
+                            Toast.makeText(getApplicationContext(),"Filename should be different!!!",Toast.LENGTH_SHORT).show();
+                        }
+                        else{
+                            rename();
+                        }
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                        Toast.makeText(getApplicationContext(), "Rename Cancelled", Toast.LENGTH_SHORT).show();
+                    }
+                });
+        alertdialog.create();
+        alertdialog.show();
     }
 
     private void rename() {
@@ -406,6 +406,7 @@ alertdialog.show();
                     @Override
                     public void onSuccess(Void aVoid) {
                         Toast.makeText(MainActivity.this,"Successfully deleted "+MyViewHolder.ve,Toast.LENGTH_SHORT).show();
+                        myAdapter.notifyDataSetChanged();
                         Intent intent = getIntent();
                         finish();
                         startActivity(intent);
