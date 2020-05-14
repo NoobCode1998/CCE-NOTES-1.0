@@ -168,7 +168,7 @@ public class Register extends AppCompatActivity {
                         if (task.isSuccessful()) {
 
 
-                            Toast.makeText(Register.this, "User Created.", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Register.this, "User Created", Toast.LENGTH_SHORT).show();
                             userID = fAuth.getCurrentUser().getUid();
 
 
@@ -200,7 +200,7 @@ public class Register extends AppCompatActivity {
 
 
                                                 //user shared preference
-                                                Toast.makeText(getApplicationContext(), "Registered as staff", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getApplicationContext(), "Registered as Staff", Toast.LENGTH_SHORT).show();
                                             }else {
                                                 sharedpreferences = getSharedPreferences("loginSave",
                                                         MODE_PRIVATE);
@@ -214,7 +214,7 @@ public class Register extends AppCompatActivity {
                                                 startActivity(new Intent(getApplicationContext(), StudentDetailsCategory.class));
                                                 finish();
 
-                                                Toast.makeText(getApplicationContext(), "Registered as student", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(getApplicationContext(), "Registered as Student", Toast.LENGTH_SHORT).show();
                                             }
                                         }
                                     })

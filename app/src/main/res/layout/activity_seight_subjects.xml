@@ -10,7 +10,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,46 +24,32 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/s8_btn_DM_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Data Mining" />
-
-            <Button
-                android:id="@+id/s8_btn_FST_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Fuzzy Set Theory" />
-
-            <Button
-                android:id="@+id/s8_btn_CC_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Cloud Computing" />
-
-            <Button
                 android:id="@+id/s8_btn_ES_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Embedded Systems" />
+                android:text="@string/embedded_systems" />
 
             <Button
-                android:id="@+id/s8_btn_AI_id"
+                android:id="@+id/s8_btn_DM_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Artificial Intelligence" />
+                android:text="@string/data_mining" />
+
+            <Button
+                android:id="@+id/s8_btn_EIA_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fuzzy_set_theory" />
 
             <Button
                 android:id="@+id/s8_btn_POIS_id"
                 style="@style/button_theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Principles of Information Security" />
+                android:text="@string/principles_of_information_security" />
         </LinearLayout>
     </ScrollView>
 

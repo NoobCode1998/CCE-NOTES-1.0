@@ -13,10 +13,8 @@ import static com.jcupzz.ccenotes.SFourSubjects.j;
 public class SEightSubjects extends AppCompatActivity implements View.OnClickListener {
 
     Button s8_btn_dm;
-    Button s8_btn_fst;
-    Button s8_btn_cc;
+    Button s8_btn_eia;
     Button s8_btn_es;
-    Button s8_btn_ai;
     Button s8_btn_pois;
 
     @Override
@@ -28,7 +26,7 @@ public class SEightSubjects extends AppCompatActivity implements View.OnClickLis
         SharedPreferences sharedpreferences = getSharedPreferences("loginSave",
                 MODE_PRIVATE);
         SharedPreferences.Editor myEdit = sharedpreferences.edit();
-        String acc = sharedpreferences.getString("staff", "");;
+        String acc = sharedpreferences.getString("staff", "");
         if(!(acc.equals("1")||acc.equals("0")))
         {
             startActivity(new Intent(getApplicationContext(),Register.class));
@@ -37,20 +35,15 @@ public class SEightSubjects extends AppCompatActivity implements View.OnClickLis
 
 
         s8_btn_dm = findViewById(R.id.s8_btn_DM_id);
-        s8_btn_fst = findViewById(R.id.s8_btn_FST_id);
-        s8_btn_cc = findViewById(R.id.s8_btn_CC_id);
+        s8_btn_eia = findViewById(R.id.s8_btn_EIA_id);
         s8_btn_es = findViewById(R.id.s8_btn_ES_id);
-        s8_btn_ai = findViewById(R.id.s8_btn_AI_id);
         s8_btn_pois = findViewById(R.id.s8_btn_POIS_id);
 
 
         s8_btn_pois.setOnClickListener(this);
-        s8_btn_ai.setOnClickListener(this);
         s8_btn_es.setOnClickListener(this);
-        s8_btn_cc.setOnClickListener(this);
-        s8_btn_fst.setOnClickListener(this);
         s8_btn_dm.setOnClickListener(this);
-
+s8_btn_eia.setOnClickListener(this);
 
 
 
@@ -70,20 +63,14 @@ public class SEightSubjects extends AppCompatActivity implements View.OnClickLis
             case R.id.s8_btn_DM_id:
                 j = 1;
                 break;
-            case R.id.s8_btn_FST_id:
+            case R.id.s8_btn_EIA_id:
                 j = 2;
                 break;
-            case R.id.s8_btn_CC_id:
+            case R.id.s8_btn_ES_id:
                 j = 3;
                 break;
-            case R.id.s8_btn_ES_id:
-                j = 4;
-                break;
-            case R.id.s8_btn_AI_id:
-                j = 5;
-                break;
             case R.id.s8_btn_POIS_id:
-                j = 6;
+                j = 4;
                 break;
 
         }

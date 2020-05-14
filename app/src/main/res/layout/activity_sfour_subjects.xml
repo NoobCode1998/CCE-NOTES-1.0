@@ -10,7 +10,9 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="7dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -22,19 +24,12 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/s4_btn_maths_id"
-                style="@style/button_theme"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Mathematics" />
-
-            <Button
                 android:id="@+id/s4_btn_OS_id"
                 style="@style/button_theme"
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Operating Systems" />
+                android:text="@string/operating_systems" />
 
             <Button
                 android:id="@+id/s4_btn_DSL_id"
@@ -42,7 +37,21 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Digital Systems Lab" />
+                android:text="@string/digital_systems_lab" />
+
+            <Button
+                android:id="@+id/s4_btn_BE_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/business_economics" />
+
+            <Button
+                android:id="@+id/s4_btn_maths_id"
+                style="@style/button_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/mathematics" />
 
             <Button
                 android:id="@+id/s4_btn_PDD_id"
@@ -50,23 +59,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Principles of Database Design" />
-
-            <Button
-                android:id="@+id/s4_btn_COAA_id"
-                style="@style/button_theme"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Computer Organization and Architecture" />
-
-            <Button
-                android:id="@+id/s4_btn_OPDAP_id"
-                style="@style/button_theme"
-
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Object Oriented Design and Programming" />
+                android:text="@string/principles_of_database_design" />
 
             <Button
                 android:id="@+id/s4_btn_FAOSSL_id"
@@ -74,7 +67,23 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Free and Open Source Software Lab" />
+                android:text="@string/free_and_open_source_software_lab" />
+
+            <Button
+                android:id="@+id/s4_btn_COAA_id"
+                style="@style/button_theme"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/computer_organization_and_architecture" />
+
+            <Button
+                android:id="@+id/s4_btn_OPDAP_id"
+                style="@style/button_theme"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/object_oriented_design_and_programming" />
 
         </LinearLayout>
     </ScrollView>

@@ -19,6 +19,7 @@ public class SFourSubjects extends AppCompatActivity implements View.OnClickList
     Button s4_btn_coaa;
     Button s4_btn_opdap;
     Button s4_btn_fasossl;
+    Button s4_btn_be;
     //String [] cse = {"Mathematics","Computer Organization and Architecture","Operating Systems","Object Oriented Design and Programming"
     //      ,"Principles of Database Design","Free and Open Source Software Lab","Digital Systems Lab"};
     public static int j=0;
@@ -35,6 +36,7 @@ public class SFourSubjects extends AppCompatActivity implements View.OnClickList
         s4_btn_coaa = findViewById(R.id.s4_btn_COAA_id);
         s4_btn_opdap   = findViewById(R.id.s4_btn_OPDAP_id);
         s4_btn_fasossl   = findViewById(R.id.s4_btn_FAOSSL_id);
+        s4_btn_be = findViewById(R.id.s4_btn_BE_id);
 
 
 
@@ -45,6 +47,7 @@ public class SFourSubjects extends AppCompatActivity implements View.OnClickList
         s4_btn_dsl.setOnClickListener(this);
         s4_btn_os.setOnClickListener(this);
         s4_btn_maths.setOnClickListener(this);
+        s4_btn_be.setOnClickListener(this);
 
 
 //logout
@@ -91,6 +94,8 @@ public class SFourSubjects extends AppCompatActivity implements View.OnClickList
             case R.id.s4_btn_FAOSSL_id:
                 j=7;
                 break;
+            case R.id.s4_btn_BE_id:
+                j=8;
 
         }
     }

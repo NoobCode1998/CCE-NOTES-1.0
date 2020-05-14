@@ -21,18 +21,14 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.StorageReference;
+
 
 import java.io.File;
 
-import static android.os.Environment.DIRECTORY_DOWNLOADS;
 
 public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener, View.OnClickListener {
     public static String he;
 public static String ve;
-    public static String ha;
 public static int l=0;
     public static String path;
 
@@ -49,6 +45,7 @@ TextView mName;
 mCardView= itemView.findViewById(R.id.cardview_id);
 mCardView.setOnCreateContextMenuListener(this);
 mCardView.setOnClickListener(this);
+mDownload.setOnClickListener(this);
 
 
 }
@@ -56,8 +53,12 @@ mCardView.setOnClickListener(this);
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         if(StudentTeacherCategory.stc_integer==1) {
-            menu.add(getAdapterPosition(), 121, 0, "Delete");
+            menu.add(getAdapterPosition(), 121, 2, "Delete");
             ve = mName.getText().toString();
+        }
+        if(StudentTeacherCategory.stc_integer==1) {
+            menu.add(getAdapterPosition(), 122, 1, "Rename");
+
         }
     }
 
@@ -65,7 +66,7 @@ mCardView.setOnClickListener(this);
     public void onClick(View v) {
         if(v.getId()==R.id.cardview_id) {
             he = mName.getText().toString();
-            path = "/storage/self/primary/Android/data/com.jcupzz.ccenotes/files/" + he + ".pdf";
+            path = "/storage/self/primary/Android/data/com.jcupzz.ccenotes/files/" + he+"("+MainActivity.s4s6s8var+")"+".pdf";
             File file = new File(path);
             //Toast.makeText(v.getContext(),path,Toast.LENGTH_SHORT).show();
             if (file.exists()) {
@@ -75,6 +76,11 @@ mCardView.setOnClickListener(this);
             } else {
                 Toast.makeText(v.getContext(), "This file is not found in your Storage!", Toast.LENGTH_SHORT).show();
             }
+
+        }
+        if(v.getId()==R.id.down)
+        {
+            Toast.makeText(v.getContext(),"wwww",Toast.LENGTH_SHORT).show();
         }
 
 

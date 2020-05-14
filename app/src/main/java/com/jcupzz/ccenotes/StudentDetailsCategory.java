@@ -21,7 +21,7 @@ import com.scwang.wave.MultiWaveHeader;
 import java.util.ArrayList;
 import java.util.List;
 
-public class StudentDetailsCategory extends MainActivity  {
+public class StudentDetailsCategory extends AppCompatActivity  {
     public static Button btn_s2,btn_s4,btn_s6,btn_s8;
     public static int i;
     MultiWaveHeader wave_head_stc,wave_foot_stc;
@@ -76,9 +76,9 @@ public class StudentDetailsCategory extends MainActivity  {
         btn_s2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                i=2;
                 Intent s2 = new Intent(StudentDetailsCategory.this,STwoSubjects.class);
                 startActivity(s2);
-                i=2;
             }
         });
         btn_s4.setOnClickListener(new View.OnClickListener() {
