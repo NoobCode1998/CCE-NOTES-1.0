@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.File;
@@ -34,6 +35,10 @@ public static String downloadFilePath;
                     if(download_id==MyAdapter.DownloadId)
                     {
                         Toast.makeText(context,"Download Completed ",Toast.LENGTH_LONG).show();
+
+
+                        //change icon
+                        //change icon
                         downloadFilePath = null;
                         String downloadFileLocalUri = cursor.getString(cursor.getColumnIndex(DownloadManager.COLUMN_LOCAL_URI));
                         if (downloadFileLocalUri != null) {
